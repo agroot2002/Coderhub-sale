@@ -1,0 +1,143 @@
+/* Jai BALAJI Jai SIYARAM */
+
+:root{
+    --master-font: 'Jacques Francois Shadow', cursive;
+    --title-font: 'Jolly Lodger', cursive;
+    --content-font: 'Mukta', sans-serif;
+    --button-font: 'Monomaniac One', sans-serif;
+    --test : 'Press Start 2P', cursive;
+}
+
+body{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+button{
+    font-size: 1vw;
+    padding: 0.5rem;
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+.title{
+    color: #FFF;
+    font-family: var(--test);
+    font-size: clamp(0.75rem, 0.1667rem + 2.5926vw, 2.5rem);    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.notice{
+    width: 50vw;
+    height: max-content;
+    margin-inline: auto;
+    margin-left: 5vw;
+    margin-top: 5vw;
+    border: 4px solid #8c8c8c;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 20px 0px rgb(255, 255, 255);
+    padding-inline: 3vw;
+}
+
+.notice > h2{
+    color: #FFF;
+    font-family: var(--title-font);
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-block: 1rem;
+}
+
+.notice > p{
+    color: #FFF;
+    text-align: center;
+    font-family: var(--content-font);
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.996px;
+    margin-block: 0.5rem;
+}
+
+.notice > button{
+    color: #FFF;
+    background-color: black;
+    text-align: center;
+    font-family: var(--button-font);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.996px;
+    margin-block: 1rem;
+}
+
+.notice > input{
+    background-color: black;
+    color: white;
+    border: none;
+    font-family: var(--content-font);
+    font-size: 2rem;
+    font-weight: bold;
+    width: 50px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 2.5%;
+}
+
+.notice > input:focus-visible{
+    outline: none;
+}
+
+img{
+    width: clamp(23.75rem, 21.6667rem + 9.2593vw, 30rem);;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+button:hover{
+    scale: 1.05;
+    border-width: 4px;
+    border-color: white;
+    transition: all 250ms ease-out ;
+}
+
+@media only screen and (max-width:800px){
+    body{
+        height: 120vh;
+    }
+    .title{
+        margin-block: 3rem ;
+    }
+    .notice{
+        width: 90vw;
+        margin-left: 0;
+    }
+    .notice > h2{
+        font-size: 1.75rem;
+    }
+    .notice > p{
+        font-size: 0.75rem;
+    }
+    img{
+        margin-right: -5vw;
+    }
+}
