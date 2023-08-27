@@ -29,9 +29,16 @@
         <input type="number" value="25" readonly >
         <p>OR</p>
         <p>You can Click here 👇 to go manually</p>
-        <button id="webwiseways">WebWiseWays.com</button>
-        <h2>Our Domain is on sale on Namecheap Marketplace</h2>
-        <button id="purchasebtn">Explore more</button>
+        <button id="webwiseways">www.WebWiseWays.com</button>
+        <h2>Our Domain is on sale</h2>
+        <div>
+            <button id="purchasebtn-afternic">
+                <img src="afternic-logo.png" alt="coderhub on afternic">
+            </button>
+            <button id="purchasebtn-namecheap">
+                <img src="namecheap-logo.png" alt="coderhub on namecheap marketplace">
+            </button>
+        </div>
     </div>
     <img src="coderhub.gif" alt="coderhub">
 </body>
@@ -54,26 +61,32 @@
     function stopTimer(){
         if(input.value <= 0){
             clearInterval(intervalId)
-            userRedirect()
+            userRedirect('https://webwiseways.com/')
         }
     }
 
-    function userRedirect(){
-        window.location.replace('http://webwiseways.com/')
+    function userRedirect(url){
+        window.location.replace(url)
     }
 
     startTimer()
 
     const redirectButton = document.querySelector('#webwiseways')
-    const purchaseButton = document.querySelector('#purchasebtn')
+    const afternicPurchaseButton = document.querySelector('#purchasebtn-afternic')
+    const namecheapPurchaseButton = document.querySelector('#purchasebtn-namecheap')
 
     redirectButton.addEventListener('click' , ()=>{
-        window.location.replace('http://webwiseways.com/')
+        userRedirect('https://webwiseways.com/')
     })
 
-    purchaseButton.addEventListener('click' , ()=>{
-        window.location.replace('https://www.namecheap.com/market/')
+    afternicPurchaseButton.addEventListener('click' , ()=>{
+        userRedirect('https://www.afternic.com/domain/coderhub.blog')
     })
+
+    namecheapPurchaseButton.addEventListener('click' , ()=>{
+        userRedirect('https://www.namecheap.com/market/')
+    })
+
 </script>
 
 </html>

@@ -19,9 +19,24 @@ body{
 button{
     font-size: 1vw;
     padding: 0.5rem;
-    border: 2px solid whitesmoke;
+    border: 2px solid rgba(245, 245, 245, 0.699);
     border-radius: 5px;
     cursor: pointer;
+}
+
+button > img {
+    width: 15vw;
+    height: 3vw;
+    min-width: 100px;
+    min-height: 20px;
+    padding: 1%;
+}
+
+.notice > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 h1, h2, p {
@@ -77,7 +92,7 @@ h1, h2, p {
     margin-block: 0.5rem;
 }
 
-.notice > button{
+.notice button{
     color: #FFF;
     background-color: black;
     text-align: center;
@@ -106,7 +121,7 @@ h1, h2, p {
     outline: none;
 }
 
-img{
+body > img{
     width: clamp(23.75rem, 21.6667rem + 9.2593vw, 30rem);;
     position: fixed;
     bottom: 0;
@@ -135,9 +150,9 @@ button:hover{
         font-size: 1.75rem;
     }
     .notice > p{
-        font-size: 0.75rem;
+        font-size: 1rem;
     }
-    img{
+    body > img{
         margin-right: -5vw;
     }
 }
